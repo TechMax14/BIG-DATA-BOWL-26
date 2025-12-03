@@ -1,0 +1,18 @@
+# Raw competition data
+data/train/
+data/processed/
+
+# Model artifacts
+data/models/
+data/abi/metrics/catch_probability/xCatch_model.joblib
+
+# Heavy media
+AirDuel.mp4
+media/video_assets/
+
+# Generated visuals (optional to ignore, but good practice)
+visuals/
+
+# Python cache
+__pycache__/
+*.pyc
