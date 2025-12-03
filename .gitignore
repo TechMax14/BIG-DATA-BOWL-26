@@ -7,7 +7,7 @@ data/models/
 data/abi/metrics/catch_probability/xCatch_model.joblib
 
 # Heavy media
-AirDuel.mp4
+#AirDuel.mp4
 media/video_assets/
 
 # Python cache
