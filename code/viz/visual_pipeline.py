@@ -49,6 +49,8 @@ def build_all_visuals(
     wr_leaderboard_csv: str,
     db_leaderboard_csv: str,   # currently unused, kept for symmetry / future DB viz
     output_dir: str = "../visuals",
+    hero_game_id: int | None = None,
+    hero_play_id: int | None = None,
 ):
     """
     Run the full visualization stack for the project.
@@ -86,17 +88,41 @@ def build_all_visuals(
     # ------------------------------------------------------------------
     # ① ABI HERO RADIAL CHART
     # ------------------------------------------------------------------
+    # ------------------------------------------------------------------
+    # ① ABI HERO RADIAL CHART
+    # ------------------------------------------------------------------
     df_abi = load_abi_data(abi_full_csv)
-    top_play = get_example_play(df_abi, mode="top")  # "top", "low", or "median"
 
-    fig = plot_abi_radial_for_play(top_play, df=df_abi)
-    (outdir / "abi_hero").mkdir(parents=True, exist_ok=True)
+    if hero_game_id is not None and hero_play_id is not None:
+        # pick the specific play by (game_id, play_id)
+        mask = (df_abi["game_id"] == hero_game_id) & (df_abi["play_id"] == hero_play_id)
+        if not mask.any():
+            raise ValueError(
+                f"No ABI row found for game_id={hero_game_id}, play_id={hero_play_id}"
+            )
+        hero_row = df_abi.loc[mask].iloc[0]
+    else:
+        # fallback: keep previous behavior (top ABI play)
+        hero_row = get_example_play(df_abi, mode="top")  # "top", "low", or "median"
+
+    fig = plot_abi_radial_for_play(hero_row, df=df_abi)
+
+    # make sure we save into <output_dir>/abi_hero/…
+    hero_dir = outdir / "abi_hero"
+    hero_dir.mkdir(parents=True, exist_ok=True)
+
+    # nice descriptive filename; adjust if you prefer something simpler
+    if hero_game_id is not None and hero_play_id is not None:
+        hero_filename = f"abi_hero_radial_g{hero_game_id}_p{hero_play_id}.png"
+    else:
+        hero_filename = "abi_hero_radial_play.png"
+
     fig.savefig(
-        outdir / "abi_hero/abi_hero_radial_top_play.png",
+        hero_dir / hero_filename,
         dpi=200,
         bbox_inches="tight",
     )
-    print("  ✓ Saved hero radial chart")
+    print(f"  ✓ Saved hero radial chart → {hero_dir / hero_filename}")
 
     # ------------------------------------------------------------------
     # ② Load frame-level enriched tracking data
@@ -110,8 +136,8 @@ def build_all_visuals(
     #   These IDs are intentionally hard-coded for the submission to make
     #   the visuals fully reproducible. You can swap to another high-ABI
     #   play by changing (game_id, play_id) to a favorite example.
-    game_id = 2024010711
-    play_id = 3554
+    game_id = 2023100803
+    play_id = 3855
 
     print(f"📈 Rendering ABI metric progression for game={game_id}, play={play_id}...")
 
