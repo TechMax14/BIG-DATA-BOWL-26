@@ -136,8 +136,8 @@ def build_all_visuals(
     #   These IDs are intentionally hard-coded for the submission to make
     #   the visuals fully reproducible. You can swap to another high-ABI
     #   play by changing (game_id, play_id) to a favorite example.
-    game_id = 2023100803
-    play_id = 3855
+    game_id = 2023112602
+    play_id = 2848
 
     print(f"📈 Rendering ABI metric progression for game={game_id}, play={play_id}...")
 

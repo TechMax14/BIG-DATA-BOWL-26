@@ -90,8 +90,8 @@ def main():
         abi_full_csv="../data/abi/results/abi_results_full.csv",
         wr_leaderboard_csv="../data/abi/results/abw_wr_leaderboard.csv",
         db_leaderboard_csv="../data/abi/results/abi_db_leaderboard.csv",
-        hero_game_id=2023100806,
-        hero_play_id=1892,
+        hero_game_id=2023112602,
+        hero_play_id=2848,
     )
 
 
