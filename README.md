@@ -242,7 +242,8 @@ The Air Battle Index (ABI) is designed to fit directly into a weekly coaching an
 
 **Author:** Max Fishman  
 **Competition:** NFL Big Data Bowl 2026 — Broadcast Visualization Track  
-**Project:** AirDuel — Air Battle Index (ABI)
+**Project:** AirDuel — Air Battle Index (ABI)  
+**Submission Link:** [Here](https://www.kaggle.com/competitions/nfl-big-data-bowl-2026-analytics/writeups/airduel-the-air-battle-index-abi)
 
 ABI is a **micro-interaction metric**, not a generic WR grade. Its purpose is to explain **how** and **why** downfield air battles are won or lost.
 
