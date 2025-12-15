@@ -217,14 +217,24 @@ visuals/
 
 ## ⭐ Sample Featured Plays
 
-- **Justin Jefferson — Week 16**  
-  ABI 92 — Elite contested catch on 3rd & 27 with extraordinary closing pressure.
+- **Justin Jefferson — Week 16 (Game 2023122405, Play 4357)**  
+  **ABI ≈ 92 — Elite Receiver Win**  
+  On 3rd-and-27, Jefferson accelerates through the stem of a corner route, creating over 16 yards of separation during ball flight. Two defenders close simultaneously at high speed, compressing the window and producing a severely contested arrival. Despite an expected catch probability below 10%, Jefferson completes the catch under heavy closing pressure, resulting in one of the highest xCatch Surprise scores of the season.
 
 - **Rashid Shaheed — Week 18**  
-  ABI 88 — Late separation win + improbable catch probability.
+  **ABI ≈ 88 — Late Separation + Improbable Completion**  
+  Shaheed gains minimal early separation but creates late space as the ball travels, forcing defenders into recovery mode. Closing pressure arrives late and off-angle, producing a narrow but survivable window at the catch point. The completion significantly outperforms model expectations, highlighting Shaheed’s ability to convert low-probability air battles into explosive plays.
 
 - **A.J. Brown — Week 7**  
-  ABI 79 — Prototypical downfield air battle showcasing leverage, strength, and timing.
+  **ABI ≈ 79 — Physical, Prototypical Air Battle**  
+  Brown maintains leverage through contact on a downfield route, holding separation against tight man coverage. Defensive closing is sustained and physical, resulting in a contested arrival with multiple defenders within the catch radius. The play exemplifies a high-intensity but expected outcome, showcasing strength, timing, and body control rather than surprise.
+
+
+---
+
+## 🏈 Weekly Coaching Use Case
+
+The Air Battle Index (ABI) is designed to fit directly into a weekly coaching and scouting workflow. On a week-to-week basis, teams can use ABI to identify which downfield targets consistently win (or lose) the receiver–defender battle while the ball is in the air, independent of quarterback decision-making or scheme design. Coaches can filter for high-ABI incompletions to study receivers who are creating separation but not being rewarded, or low-ABI completions to identify throws that were routine rather than contested. Defensively, ABI highlights which coverage units and defenders most effectively close windows and disrupt catch points, even when the pass is completed. This allows position coaches to pair film with objective movement-based evidence when preparing game plans, evaluating player performance, and coaching technique throughout the season.
 
 ---
 
